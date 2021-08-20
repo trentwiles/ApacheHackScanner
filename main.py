@@ -33,12 +33,15 @@ for line in a:
     if 'wp-login' in entry.directives['%r']:
        v = ipaddress.ip_address(ip)
        print(ip + " " + entry.directives['%r'] + " IPv" + str(v.version))
-       report(ip)
+       if sys.argv[2] == "true":
+          report(ip)
     elif 'admin/' in entry.directives['%r']:
        v = ipaddress.ip_address(ip)
        print(ip + " " + entry.directives['%r'] + " IPv" + str(v.version))
-       report(ip)
+       if sys.argv[2] == "true":
+          report(ip)
     elif 'xmlrpc' in entry.directives['%r']:
        v = ipaddress.ip_address(ip)
        print(ip + " " + entry.directives['%r'] + " IPv" + str(v.version))
-       report(ip)
+       if sys.argv[2] == "true":
+          report(ip)
